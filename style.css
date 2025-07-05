@@ -1,0 +1,8 @@
+.console {
+    font-size: 17px;
+ }
+
+a:link, a:visited {
+    text-decoration: none;
+    color: grey;
+}
