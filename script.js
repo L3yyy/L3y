@@ -168,7 +168,7 @@ function loop() {
     const my_user_input = document.getElementById("user_input");
     my_user_input.focus()
 
-    if (my_user_input.value == "help" || my_user_input.value == "projects" || my_user_input.value == "leyfetch" || my_user_input.value == "clear" || my_user_input.value == "" || my_user_input.value == "restart" || my_user_input.value == "about" || my_user_input.value == "-h" || my_user_input.value == "-lf" || my_user_input.value == "-cl" || my_user_input.value == "-pr" || my_user_input.value == "-rt" || my_user_input.value == "-a") {
+    if (my_user_input.value == "help" || my_user_input.value == "projects" || my_user_input.value == "leyfetch" || my_user_input.value == "clear" || my_user_input.value == "" || my_user_input.value == "restart" || my_user_input.value == "about" || my_user_input.value == "-h" || my_user_input.value == "-lf" || my_user_input.value == "-cl" || my_user_input.value == "-pr" || my_user_input.value == "-rt" || my_user_input.value == "-a" || my_user_input.value == "kamote") {
         my_user_input.setAttribute("style", "color: #EBDBB2; background: none; border: hidden; outline: none; font-family: monospace");
     
     } else {
