@@ -40,6 +40,9 @@ function user() {
     input.setAttribute("style", "color: grey; background: none; border: hidden; outline: none; font-family: monospace");
     input.setAttribute("id", "user_input");
     input.setAttribute("type", "text");
+    input.setAttribute("autocomplete", "off");
+    input.setAttribute("aria-autocomplete", "none");
+    //removes autocomplete suggestions
 
     document.body.appendChild(input);
 
