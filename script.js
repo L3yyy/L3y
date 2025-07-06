@@ -127,7 +127,7 @@ function cmd(){
         br();
         cons_valuebr(" ");
         cons_valuebr("<label style='color:#8F8CF2'><h3>@L3yyy</h3></label><br>Hola! I'm L3yyy, a 17 year old dev-hobbyist from the Philippines.<br>I've loved computers since I was 4 years old. I started coding at the<br>age of 12 and have been learning ever since. My goal is to become<br>a full-stack developer and maybe take on some freelance work");
-        cons_valuebr("<label style='color:#8F8CF2'><h3>@Demobnector</h3></label><br>WIP");
+        cons_valuebr("<label style='color:#8F8CF2'><h3>@Demobnector</h3></label><br>I am Demo, a BSIT student that tends to work around experimenting,<br>exploring, and enhancing my logical ability through programming as<br>a hobby. Gradually honing my talent that could potentially serve<br>as a path towards my upcoming game development future.");
         cons_valuebr(" ");
         my_user_input.value = "";
 
