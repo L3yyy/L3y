@@ -45,6 +45,7 @@ function user() {
     //removes autocomplete suggestions
 
     document.body.appendChild(input);
+    input.focus();
 
 }
 
