@@ -37,7 +37,7 @@ function user() {
     document.body.appendChild(my_span3);
 
     const input = document.createElement("input");
-    input.setAttribute("style", "color: grey; background: none; border: hidden; outline: none; font-family: monospace");
+    input.setAttribute("style", "color: grey; background: none; border: hidden; outline: none; font-family: monospace; width: 1000%;");
     input.setAttribute("id", "user_input");
     input.setAttribute("type", "text");
     input.setAttribute("autocomplete", "off");
@@ -45,7 +45,6 @@ function user() {
     //removes autocomplete suggestions
 
     document.body.appendChild(input);
-    input.focus();
 
 }
 
@@ -67,6 +66,14 @@ function cons_valuebr(value) {
     cons_val.innerHTML = value;
     document.body.appendChild(cons_val)
     br();
+}
+
+function cons_mp3br(filename) {
+    const audio = document.createElement("audio");
+    audio.src = filename;
+    audio.autoplay = true;
+    audio.style.display = "none";
+    document.body.appendChild(audio);
 }
 
 function cmd(){
@@ -114,6 +121,15 @@ function cmd(){
         cons_valuebr("<label style='color:#EBDBB2'>(__(__)___(__)__)    speedrun</label>: <a href='https://blogs.mtdv.me/watch?v=UjbImfg7gn'>https://blogs.mtdv.me/watch?v=UjbImfg7gn</a>");
         cons_valuebr(" ");
 
+    }   else if (my_user_input.value == "kamote") {
+
+        br();
+        cons_mp3br("kamote_cmd.wav");
+        cons_valuebr("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+        cons_valuebr("██░███░█░████░▄▄▀█▄░▄████▄██░▄▄███░██░▄▄▀█░▄▄▀█░▄▄▄███░▄▄▀█░▄▄▀█░▄▀▄░█░▄▄▀█░▄▄▀██");
+        cons_valuebr("██░█░█░█░▄▄░█░▀▀░██░█████░▄█░▄████░██░▀▀░█░██░█░█▄▀███░██░█░▀▀░█░█▄█░█░▀▀░█░██░██");
+        cons_valuebr("██▄▀▄▀▄█▄██▄█▄██▄██▄████▄▄▄█▄█████▄▄█▄██▄█▄██▄█▄▄▄▄███▄██▄█▄██▄█▄███▄█▄██▄█▄██▄██");
+
         my_user_input.value = "";
 
     }   else if (my_user_input.value == "restart" || my_user_input.value == "-rt") {
@@ -140,7 +156,6 @@ function cmd(){
         cons_valuebr("command not found");
     } 
 
-
     my_user_input.remove()
     user();
 
@@ -151,6 +166,7 @@ user();
 function loop() {
     requestAnimationFrame(loop);
     const my_user_input = document.getElementById("user_input");
+    my_user_input.focus()
 
     if (my_user_input.value == "help" || my_user_input.value == "projects" || my_user_input.value == "leyfetch" || my_user_input.value == "clear" || my_user_input.value == "" || my_user_input.value == "restart" || my_user_input.value == "about" || my_user_input.value == "-h" || my_user_input.value == "-lf" || my_user_input.value == "-cl" || my_user_input.value == "-pr" || my_user_input.value == "-rt" || my_user_input.value == "-a") {
         my_user_input.setAttribute("style", "color: #EBDBB2; background: none; border: hidden; outline: none; font-family: monospace");
@@ -168,6 +184,3 @@ document.addEventListener("keypress", function(e) {
     }
 
   });
-
-const currentVersion = "1.6";
-console.log("Running version:", currentVersion);
