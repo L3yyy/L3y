@@ -168,3 +168,6 @@ document.addEventListener("keypress", function(e) {
     }
 
   });
+
+const currentVersion = "1.6";
+console.log("Running version:", currentVersion);
