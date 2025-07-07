@@ -118,7 +118,7 @@ function cmd(){
         cons_valuebr("   <label style='color:#EBDBB2'>)         (       facebook</label>: <a href='https://www.facebook.com/LLUVSICC/'>https://www.facebook.com/LLUVSICC/</a>");
         cons_valuebr("  <label style='color:#EBDBB2'>(           )      youtube</label>: <a href='https://www.youtube.com/@prodbyluvsic'>https://www.youtube.com/@prodbyluvsic</a>");
         cons_valuebr(" <label style='color:#EBDBB2'>( (  )   (  ) )     onlyfans</label>: <a href='https://only-fans.me/ley'>https://only-fans.me/ley</a>");
-        cons_valuebr("<label style='color:#EBDBB2'>(__(__)___(__)__)    github</label>: <a href='https://github.com/L3yyy</a>");
+        cons_valuebr("<label style='color:#EBDBB2'>(__(__)___(__)__)    github</label>: <a href='https://github.com/L3yyy'>https://github.com/L3yyy</a>");
         cons_valuebr(" ");
 
     }   else if (my_user_input.value == "kamote") {
