@@ -1,5 +1,5 @@
 const instructions = document.createElement("span");
-instructions.innerHTML = "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ <strong>Type 'help' for a list of commands.</strong><br>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ <strong>Type 'leyfetch' to fetch my social media profiles.</strong><br>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ <strong>Type 'projects' to see my projects.</strong><br><br>";
+instructions.innerHTML = "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ <strong>Type 'help' for a list of commands.</strong><br>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ <strong>Type 'leyfetch' to fetch my social media profiles.</strong><br>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ <strong>Type 'gui' to open the gui version.</strong><br><br>";
 instructions.setAttribute("style", "color: #EBDBB2; font-family: monospace;");
 document.body.appendChild(instructions);
 
@@ -103,6 +103,7 @@ function cmd(){
         cons_valuebr("projects, -pr             shows the projects i've worked on.");
         cons_valuebr("restart,  -rt             refreshes the website for a new start.");
         cons_valuebr("about,    -ab             shows information behind the developers of <br>                          <strong>L3Y Terminal</strong>.");
+        cons_valuebr("gui,      -g              opens the GUI version of this terminal.");
 
         my_user_input.value = "";
         br();
@@ -151,6 +152,12 @@ function cmd(){
         cons_valuebr(" ");
         my_user_input.value = "";
 
+     } else if (my_user_input.value == "gui" || my_user_input.value == "-g") {
+        br();
+        cons_valuebr("opening GUI version...");
+        window.open('https://l3yyy.github.io/L3Y-GUI/', '_blank');
+        br();
+
     } else {
         br();
         cons_valuebr("command not found");
@@ -166,16 +173,32 @@ user();
 function loop() {
     requestAnimationFrame(loop);
     const my_user_input = document.getElementById("user_input");
-    my_user_input.focus()
+    my_user_input.focus();
 
-    if (my_user_input.value == "help" || my_user_input.value == "projects" || my_user_input.value == "leyfetch" || my_user_input.value == "clear" || my_user_input.value == "" || my_user_input.value == "restart" || my_user_input.value == "about" || my_user_input.value == "-h" || my_user_input.value == "-lf" || my_user_input.value == "-cl" || my_user_input.value == "-pr" || my_user_input.value == "-rt" || my_user_input.value == "-a" || my_user_input.value == "kamote") {
+    if (
+        my_user_input.value == "help" ||
+        my_user_input.value == "projects" ||
+        my_user_input.value == "leyfetch" ||
+        my_user_input.value == "clear" ||
+        my_user_input.value == "" ||
+        my_user_input.value == "restart" ||
+        my_user_input.value == "about" ||
+        my_user_input.value == "-h" ||
+        my_user_input.value == "-lf" ||
+        my_user_input.value == "-cl" ||
+        my_user_input.value == "-pr" ||
+        my_user_input.value == "-rt" ||
+        my_user_input.value == "-a" ||
+        my_user_input.value == "-g" ||
+        my_user_input.value == "gui" ||
+        my_user_input.value == "kamote"
+    ) {
         my_user_input.setAttribute("style", "color: #EBDBB2; background: none; border: hidden; outline: none; font-family: monospace");
-    
     } else {
         my_user_input.setAttribute("style", "color: red; background: none; border: hidden; outline: none; font-family: monospace");
     }
-  }
-  loop();
+}
+loop();
 
 document.addEventListener("keypress", function(e) {
 
