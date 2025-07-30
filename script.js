@@ -102,7 +102,7 @@ function cmd(){
         cons_valuebr("clear,    -cl             clears the terminal.");
         cons_valuebr("projects, -pr             shows the projects i've worked on.");
         cons_valuebr("restart,  -rt             refreshes the website for a new start.");
-        cons_valuebr("about,    -ab             shows information behind the developers of <br>                          <strong>L3Y Terminal</strong>.");
+        cons_valuebr("about,    -ab             shows information behind the developer of <br>                          <strong>L3Y Terminal</strong>.");
         cons_valuebr("gui,      -g              opens the GUI version of this terminal.");
 
         my_user_input.value = "";
