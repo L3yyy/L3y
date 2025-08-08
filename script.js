@@ -9,7 +9,7 @@ function user() {
 //Type 'projects' to see my projects.
 
     const my_span = document.createElement("span");
-    my_span.innerHTML = "user";
+    my_span.innerHTML = "guest";
     my_span.setAttribute("style", "color:#EBDBB2");
     my_span.setAttribute("class", "console");
 
@@ -23,7 +23,7 @@ function user() {
     document.body.appendChild(my_span1);
 
     const my_span2 = document.createElement("span");
-    my_span2.innerHTML = "test";
+    my_span2.innerHTML = "user";
     my_span2.setAttribute("style", "color:#EBDBB2");
     my_span2.setAttribute("class", "console");
 
@@ -104,6 +104,7 @@ function cmd(){
         cons_valuebr("restart,  -rt             refreshes the website for a new start.");
         cons_valuebr("about,    -ab             shows information behind the developer of <br>                          <strong>L3Y Terminal</strong>.");
         cons_valuebr("gui,      -g              opens the GUI version of this terminal.");
+        cons_valuebr("sudo -i,                  use the L3Y Terminal as root.");
 
         my_user_input.value = "";
         br();
@@ -115,11 +116,11 @@ function cmd(){
         cons_valuebr(" ");
         cons_valuebr("    <label style='color:#EBDBB2'>/\\_____/\\        email</label>: kuffiwrld999<label style='color:#EBDBB2'>@</label>gmail.com");
         cons_valuebr("   <label style='color:#EBDBB2'>/</label>  <label style='color:white'>o   o</label>  <label style='color:#EBDBB2'>\\</label>       <label style='color:#EBDBB2'>--------------------------------------------------");
-        cons_valuebr("  <label style='color:#EBDBB2'>(</label> <label style='color:white'>==  ^  == </label><label style='color:#EBDBB2'>)</label>      <label style='color:#EBDBB2'>discord</label>: <a href='https://discord.gg/wV86RZUR7V'>https://discord.gg/wV86RZUR7V</a>");
-        cons_valuebr("   <label style='color:#EBDBB2'>)         (       facebook</label>: <a href='https://www.facebook.com/LLUVSICC/'>https://www.facebook.com/LLUVSICC/</a>");
-        cons_valuebr("  <label style='color:#EBDBB2'>(           )      youtube</label>: <a href='https://www.youtube.com/@prodbyluvsic'>https://www.youtube.com/@prodbyluvsic</a>");
-        cons_valuebr(" <label style='color:#EBDBB2'>( (  )   (  ) )     onlyfans</label>: <a href='https://only-fans.me/ley'>https://only-fans.me/ley</a>");
-        cons_valuebr("<label style='color:#EBDBB2'>(__(__)___(__)__)    github</label>: <a href='https://github.com/L3yyy'>https://github.com/L3yyy</a>");
+        cons_valuebr("  <label style='color:#EBDBB2'>(</label> <label style='color:white'>==  ^  == </label><label style='color:#EBDBB2'>)</label>      <label style='color:#EBDBB2'>discord</label>: <u><a href='https://discord.gg/wV86RZUR7V'>https://discord.gg/wV86RZUR7V</a></u>");
+        cons_valuebr("   <label style='color:#EBDBB2'>)         (       facebook</label>: <u><a href='https://www.facebook.com/LLUVSICC/'>https://www.facebook.com/LLUVSICC/</a></u>");
+        cons_valuebr("  <label style='color:#EBDBB2'>(           )      youtube</label>: <u><a href='https://www.youtube.com/@prodbyluvsic'>https://www.youtube.com/@prodbyluvsic</a></u>");
+        cons_valuebr(" <label style='color:#EBDBB2'>( (  )   (  ) )     onlyfans</label>: <u><a href='https://only-fans.me/ley'>https://only-fans.me/ley</a></u>");
+        cons_valuebr("<label style='color:#EBDBB2'>(__(__)___(__)__)    github</label>: <u><a href='https://github.com/L3yyy'>https://github.com/L3yyy</a></u>");
         cons_valuebr(" ");
 
     }   else if (my_user_input.value == "kamote") {
@@ -140,7 +141,15 @@ function cmd(){
 
     } else if (my_user_input.value == "projects" || my_user_input.value == "-pr") {
         br();
-        cons_value("projects will be available soon!");
+        cons_valuebr(" ");
+        cons_valuebr("these are the projects i have worked on; big and small.");
+        cons_valuebr("------------------------------------------------------------");
+        cons_valuebr("L3Y KALKYU              <a href='https://l3yyy.github.io/L3Y-KALKYU' target='_blank'>https://l3yyy.github.io/L3Y-KALKYU</a>")
+        // window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXCgBwE%3D', '_blank');
+        br();
+    
+    } else if (my_user_input.value == "sudo -i") {
+        br();
         window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXCgBwE%3D', '_blank');
         br();
 
@@ -151,15 +160,19 @@ function cmd(){
         cons_valuebr(" ");
         my_user_input.value = "";
 
-     } else if (my_user_input.value == "gui" || my_user_input.value == "-g") {
+    } else if (my_user_input.value == "gui" || my_user_input.value == "-g") {
         br();
         cons_valuebr("opening GUI version...");
         window.open('https://l3yyy.github.io/L3Y-GUI/', '_blank');
         br();
 
+    } else if (my_user_input == "whoami") {
+        br();
+        cons_valuebr("guest user")
+
     } else {
         br();
-        cons_valuebr("command not found");
+        cons_valuebr(`<span style="color:red">${my_user_input.value}</span> command not found`);
     } 
 
     my_user_input.remove()
@@ -190,7 +203,10 @@ function loop() {
         my_user_input.value == "-a" ||
         my_user_input.value == "-g" ||
         my_user_input.value == "gui" ||
-        my_user_input.value == "kamote"
+        my_user_input.value == "kamote" ||
+        my_user_input.value == "sudo -i" ||
+        my_user_input.value == "sudo" ||
+        my_user_input.value == "sudo "
     ) {
         my_user_input.setAttribute("style", "color: #EBDBB2; background: none; border: hidden; outline: none; font-family: monospace");
     } else {
@@ -206,3 +222,23 @@ document.addEventListener("keypress", function(e) {
     }
 
   });
+
+document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === "c" && !e.shiftKey) {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.key.toLowerCase() === "a") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") {
+        const copy_alert = document.createElement("div");
+        copy_alert.textContent = "Copied!";
+        copy_alert.style.position = "fixed";
+        document.body.appendChild;
+        setTimeout(() => copy_alert.remove(), 1000);
+
+        return;
+    }
+});
