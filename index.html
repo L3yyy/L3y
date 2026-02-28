@@ -6,18 +6,26 @@
     <title>L3Y Terminal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #0D1B2A; font-family: monospace; color: #EBDBB2;">
-    L3Y Terminal [Version 1.8] 
-    <pre>
-        █████       ████████ █████ █████ 
-        ░░███       ███░░░░██░░███ ░░███ 
-         ░███      ░░░    ░███░░███ ███  
-         ░███         ██████░  ░░█████   
-         ░███        ░░░░░░███  ░░███    
-         ░███      ████   ░███   ░███    
-         ██████████░░████████    █████   
-        ░░░░░░░░░░░ ░░░░░░░░    ░░░░░     <u>by L3Y</u>
-    </pre>
+<body>
+
+    <div id="titlebar">
+    <div class="dot dot-red"></div>
+    <div class="dot dot-yellow"></div>
+    <div class="dot dot-green"></div>
+    <span id="titlebar-label">guest@L3Y Terminal — ~</span>
+    </div>
+
+    <div id="terminal"></div>
+
+    <div id="input-row">
+    <div id="prompt">
+        <span class="u-name">guest</span><span class="u-at">@</span><span class="u-host">L3Y</span><span class="u-sep">:~ </span><span class="u-hash">#</span>
+    </div>
+    <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" aria-label="terminal input" autofocus />
+    </div>
+
+    <div id="toast"></div>
+    
     <script src="script.js">
     </script>
 </body>
