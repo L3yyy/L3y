@@ -125,7 +125,7 @@ function cmdAbout() {
   blank();
   line('<span class="c-purple" style="font-size:1.1em;font-weight:bold;">@L3yyy</span>');
   blank();
-  line('<span class="c-gray">Hola! I\'m L3yyy, a 17-year-old dev-hobbyist from the Philippines.</span>');
+  line('<span class="c-gray">Hola! I\'m L3yyy, a 18-year-old dev-hobbyist from the Philippines.</span>');
   line('<span class="c-gray">I\'ve loved computers since I was 4 years old. I started coding at</span>');
   line('<span class="c-gray">the age of 12 and have been learning ever since. My goal is to</span>');
   line('<span class="c-gray">become a full-stack developer and maybe take on some freelance work.</span>');
@@ -297,3 +297,4 @@ document.addEventListener('click', (e) => {
     input.focus();
   }
 });
+
